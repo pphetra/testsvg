@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML Strict//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="raphael.js"></script>
+	<script type="text/javascript" src="raphael-utils.js"></script>
+	<script type="text/javascript" src="our-markets-map.js"></script>
+
+	<style>
+
+	</style>
+</head>
+	<body style="margin:0px; padding:3px 0px 0px 0px;">
+		<script id="gc_pacific" type="text/svg">
+			<g id="gc_pacific">
+				<polygon fill="#404041" points="75.737,72.534 75.737,43.592 135.878,43.592 135.878,72.359 109.212,72.359 103.285,79.856 97.242,72.553  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.536" x="77.412" y="47.223"></rect>
+				<text transform="matrix(1 0 0 1 87.4805 55.0991)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Pacific </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="-8.559" y="11">Northwest</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_sanfrancisco" type="text/svg">
+			<g id="gc_sanfrancisco">
+				<polygon fill="#404041" points="32.301,163.244 32.301,134.302 115.05,134.302     115.05,163.069 77.842,163.069 71.914,170.566 65.871,163.263  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="24.189" width="74.457" x="35.081" y="137.933"></rect>
+				<text transform="matrix(1 0 0 1 37.1548 145.8091)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">San Francisco </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="2.141" y="11">- Sacramento</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_sanjose" type="text/svg">
+			<g id="gc_sanjose">
+				<polygon fill="#404041" points="45.571,185.715 45.571,164.773 101.712,164.773     101.712,185.54 79.046,185.54 73.119,193.037 67.076,185.734  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.536" x="47.246" y="170.404"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 50.5815 178.2803)">San José</text>
+			</g>
+		</script>
+
+		<script id="gc_southern" type="text/svg">
+			<g id="gc_southern">
+				<polygon fill="#404041" points="47.842,213.87 47.842,184.928 127.591,184.928     127.591,213.695 93.383,213.695 87.456,221.192 81.413,213.889  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="24.189" width="67.492" x="54.104" y="188.559"></rect>
+				<text transform="matrix(1 0 0 1 56.3594 196.4351)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Southern CA </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="8.256" y="11">- Phoenix</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_rockies" type="text/svg">
+			<g id="gc_rockies">
+				<polygon fill="#404041" points="187.047,175.703 187.047,154.761 243.189,154.761     243.189,175.528 220.523,175.528 214.595,183.025 208.552,175.722  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.536" x="188.722" y="160.392"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 195.4287 168.2681)">Rockies</text>
+			</g>
+		</script>
+
+		<script id="gc_northtexas" type="text/svg">
+			<g id="gc_northtexas">
+				<polygon fill="#404041" points="239.245,251.439 239.245,230.498 318.993,230.498     318.993,251.264 284.786,251.264 278.858,258.762 272.815,251.459  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="24.188" width="74.457" x="242.024" y="236.129"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 251.1299 244.0039)">Noth Texas</text>
+			</g>
+		</script>
+
+		<script id="gc_greaterhouston" type="text/svg">
+			<g id="gc_greaterhouston">
+				<polygon fill="#404041" points="260.091,294.754 260.091,265.813 316.232,265.813     316.232,294.579 293.566,294.579 287.639,302.076 281.596,294.773  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="35.646" width="45.081" x="265.622" y="269.844"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 269.5166 277.7197)">Greater </text>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 267.6768 288.7197)">Houston</text>
+			</g>
+		</script>
+
+		<script id="gc_minneapolis" type="text/svg">
+			<g id="gc_minneapolis">
+				<polygon fill="#404041" points="264.939,111.161 264.939,90.219 344.688,90.219     344.688,110.986 310.48,110.986 304.553,118.483 298.51,111.18  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="24.189" width="74.457" x="267.719" y="95.85"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 275.5967 103.7261)">Minneapolis</text>
+			</g>
+		</script>
+
+		<script id="gc_missouri" type="text/svg">
+			<g id="gc_missouri">
+				<polygon fill="#404041" points="299.548,190.98 299.548,170.039 355.689,170.039     355.689,190.806 333.023,190.806 327.096,198.303 321.053,191  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.535" x="301.223" y="175.67"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 307.0156 183.5459)">Missouri</text>
+			</g>
+		</script>
+
+		<script id="gc_greaterchicago" type="text/svg">
+			<g id="gc_greaterchicago">
+				<polygon fill="#404041" points="324.348,154.479 324.348,125.537 380.49,125.537     380.49,154.304 357.824,154.304 351.896,161.801 345.854,154.498  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.535" x="326.023" y="129.168"></rect>
+				<text transform="matrix(1 0 0 1 333.6445 137.0439)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Greater </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="-1.533" y="11">Chicago</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_greatermichigan" type="text/svg">
+			<g id="gc_greatermichigan">
+				<polygon fill="#404041" points="348.736,132.868 348.736,103.926 404.879,103.926     404.879,132.693 382.213,132.693 376.285,140.19 370.242,132.887  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.535" x="350.412" y="107.557"></rect>
+				<text transform="matrix(1 0 0 1 358.0332 115.4331)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Greater </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="-3.364" y="11">Michigan</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_ohio" type="text/svg">
+			<g id="gc_ohio">
+				<polygon fill="#404041" points="352.625,182.173 352.625,141.232 427.768,141.232     427.768,181.999 396.102,181.999 390.174,189.496 384.131,182.193  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="42.338" width="70.592" x="355.272" y="146.863"></rect>
+				<text transform="matrix(1 0 0 1 377.4229 154.7388)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Ohio/ </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="-8.256" y="11">Kentuky/ </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="-19.564" y="22">Indiana (OKI)</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_greateratlanta" type="text/svg">
+			<g id="gc_greateratlanta">
+				<polygon fill="#404041" points="368.404,240.201 368.404,211.259 424.545,211.259     424.545,240.025 401.879,240.025 395.951,247.523 389.908,240.221  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.536" x="370.078" y="214.89"></rect>
+				<text transform="matrix(1 0 0 1 377.7012 222.7661)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Greater </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="1.522" y="11">Atlanta</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_lakeerie" type="text/svg">
+			<g id="gc_lakeerie">
+				<polygon fill="#404041" points="385.659,156.953 385.659,136.011 441.801,136.011     441.801,156.778 419.135,156.778 413.207,164.275 407.164,156.972  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.535" x="387.334" y="141.642"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 390.3672 149.5181)">Lake Erie</text>
+			</g>
+		</script>
+
+		<script id="gc_florida" type="text/svg">
+			<g id="gc_florida">
+				<polygon fill="#404041" points="399.547,295.146 399.547,274.205 455.688,274.205     455.688,294.973 433.022,294.973 427.095,302.469 421.052,295.166  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.056" width="52.536" x="401.222" y="279.836"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 410.6777 287.7129)">Florida</text>
+			</g>
+		</script>
+
+		<script id="gc_carolinas" type="text/svg">
+			<g id="gc_carolinas">
+				<polygon fill="#404041" points="401.744,208.383 401.744,187.442 481.493,187.442     481.493,208.208 447.286,208.208 441.358,215.706 435.315,208.403  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="24.189" width="74.457" x="404.524" y="193.073"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 418.5195 200.9487)">Carolinas</text>
+			</g>
+		</script>
+
+		<script id="gc_washington" type="text/svg">
+			<g id="gc_washington">
+				<polygon fill="#404041" points="412.347,168.979 412.347,140.037 488.489,140.037     488.489,168.804 455.823,168.804 449.896,176.301 443.853,168.998  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="65.035" x="417.772" y="143.668"></rect>
+				<text transform="matrix(1 0 0 1 421.2461 151.5439)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">Washington </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="14.985" y="11">Metro</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_philadelphia" type="text/svg">
+			<g id="gc_philadelphia">
+				<polygon fill="#404041" points="413.551,152.827 413.551,131.886 493.299,131.886     493.299,152.652 459.092,152.652 453.164,160.149 447.121,152.847  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="24.189" width="74.457" x="416.33" y="137.517"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 423.5898 145.3926)">Philadelphia</text>
+			</g>
+		</script>
+
+		<script id="gc_newyorkmetro" type="text/svg">
+			<g id="gc_newyorkmetro">
+				<polygon fill="#404041" points="442.486,135.646 442.486,106.704 498.629,106.704     498.629,135.471 475.963,135.471 470.035,142.968 463.992,135.665  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.535" x="444.162" y="110.335"></rect>
+				<text transform="matrix(1 0 0 1 446.5898 118.2109)"><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="0" y="0">New York </tspan><tspan fill="#FFFFFF" font-family="'Arial'" font-size="11" x="9.781" y="11">Metro</tspan></text>
+			</g>
+		</script>
+
+		<script id="gc_northeast" type="text/svg">
+			<g id="gc_northeast">
+				<polygon fill="#404041" points="439.826,109.73 439.826,88.789 495.968,88.789     495.968,109.556 473.302,109.556 467.374,117.053 461.331,109.75  " stroke="#FFFFFF" stroke-miterlimit="10"></polygon>
+				<rect fill="none" height="23.055" width="52.535" x="441.501" y="94.42"></rect>
+				<text fill="#FFFFFF" font-family="'Arial'" font-size="11" transform="matrix(1 0 0 1 443.9238 102.2959)">Northeast</text>
+			</g>
+		</script>
+
+		<img style="float:left; width:50px; height:50px;" src="http://www.dariomac.com/Cms_Data/Sites/dariomac_home/Themes/Default/images/d.png">
+		<br clear="both" />
+		<div style="width:600px; padding: 20px 0px 0px 90px"">
+			Move te mouse over the spots
+			<div id="board" style="width:100%;"></div>
+		</div>
+	</body>
+</html>
